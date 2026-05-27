@@ -1,0 +1,716 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Flugel | Crafted for the Free Spirit</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#3a3a43",
+              "on-background": "#e3e2e7",
+              "on-primary-fixed": "#1c1b1b",
+              "on-tertiary": "#313030",
+              "primary-fixed": "#e5e2e1",
+              "inverse-surface": "#e3e2e7",
+              "on-primary-container": "#7b7979",
+              "inverse-primary": "#5f5e5e",
+              "surface-container-high": "#292a2e",
+              "error-container": "#93000a",
+              "on-primary-fixed-variant": "#474646",
+              "on-secondary-fixed": "#e3e2e7",
+              tertiary: "#c8c6c5",
+              "on-tertiary-fixed": "#1c1b1b",
+              "on-error-container": "#ffdad6",
+              "on-tertiary-container": "#7a7979",
+              "tertiary-fixed-dim": "#c8c6c5",
+              "primary-container": "#0a0a0a",
+              outline: "#8e9192",
+              "surface-container-highest": "#343539",
+              background: "#121317",
+              "on-tertiary-fixed-variant": "#474746",
+              "surface-variant": "#343539",
+              "on-secondary-container": "#c4c7c7",
+              "outline-variant": "#444748",
+              "secondary-container": "#2a2a32",
+              "on-primary": "#313030",
+              "tertiary-fixed": "#e5e2e1",
+              secondary: "#44444E",
+              "surface-bright": "#38393d",
+              surface: "#121317",
+              "surface-container": "#1e1f23",
+              "tertiary-container": "#0a0a0a",
+              primary: "#c9c6c5",
+              "on-secondary-fixed-variant": "#c4c7c7",
+              "on-surface-variant": "#c4c7c7",
+              "on-error": "#690005",
+              "surface-dim": "#121317",
+              "primary-fixed-dim": "#c9c6c5",
+              "surface-container-low": "#1a1b1f",
+              "surface-container-lowest": "#0d0e12",
+              error: "#ffb4ab",
+              "on-secondary": "#e3e2e7",
+              "on-surface": "#e3e2e7",
+              "secondary-fixed": "#5c5c68",
+              "surface-tint": "#c9c6c5",
+              "inverse-on-surface": "#2f3034",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-xl": "120px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "container-max": "1440px",
+              unit: "8px",
+              gutter: "24px",
+            },
+            fontFamily: {
+              "label-lg": ["Cinzel Decorative", "serif"],
+              "headline-md": ["Cinzel Decorative", "serif"],
+              "headline-lg-mobile": ["Cinzel Decorative", "serif"],
+              "body-md": ["Cinzel Decorative", "serif"],
+              "label-sm": ["Cinzel Decorative", "serif"],
+              "display-lg": ["Cinzel Decorative", "serif"],
+              "headline-lg": ["Cinzel Decorative", "serif"],
+              "body-lg": ["Cinzel Decorative", "serif"],
+            },
+            fontSize: {
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                { lineHeight: "36px", letterSpacing: "0em", fontWeight: "500" },
+              ],
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "40px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "body-md": [
+                "16px",
+                {
+                  lineHeight: "24px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+              "label-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "72px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "40px",
+                { lineHeight: "48px", letterSpacing: "0em", fontWeight: "600" },
+              ],
+              "body-lg": [
+                "18px",
+                {
+                  lineHeight: "28px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "400",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="selection:bg-secondary selection:text-on-secondary">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav">
+      <div
+        class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 w-full"
+      >
+        <div class="flex items-center gap-6"></div>
+        <a
+          class="font-headline-lg text-headline-lg tracking-widest text-primary hover:opacity-70 transition-opacity duration-200"
+          href="#"
+        >
+          Flügel
+        </a>
+        <div class="flex items-center gap-6"></div>
+      </div>
+    </header>
+    <main>
+      <!-- Opening si paling ganteng -->
+      <section
+        class="relative h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="Luxury Watch"
+            class="w-full h-full object-cover opacity-60 scale-105"
+            data-alt="A macro close-up of a high-end luxury mechanical watch with gold accents resting on a dark, textured obsidian surface. The lighting is cinematic and moody, using high-contrast shadows and sharp highlights to emphasize the metallic reflections and intricate craftsmanship. The background is a deep charcoal black, creating a focused, prestigious atmosphere typical of the Lumina brand. Fine dust motes catch a sliver of warm light, adding to the atmosphere of timeless elegance."
+            src="./Asset/jumbotron.jpeg"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background"
+          ></div>
+        </div>
+        <div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+          <span
+            class="font-label-lg text-label-lg text-secondary mb-6 block tracking-[0.3em] uppercase opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_forwards]"
+            >Est. 2025</span
+          >
+          <h1
+            class="font-display-lg text-[42px] md:text-display-lg text-on-background mb-8 leading-tight opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.3s_forwards]"
+          >
+            Crafted for the<br class="hidden md:block" />
+            Free Spirit
+          </h1>
+          <div
+            class="flex flex-col md:flex-row gap-6 justify-center items-center opacity-0 translate-y-4 animate-[fadeIn_1s_ease-out_0.6s_forwards]"
+          >
+            <a
+              href="https://tr.ee/wWhkD4Mzxa"
+              target="_blank"
+              class="bg-secondary text-on-secondary px-10 py-4 font-label-lg text-label-lg tracking-widest hover:bg-secondary-fixed-dim transition-all active:scale-95"
+            >
+              SHOP NOW
+            </a>
+            <a 
+              href="#point"
+              class="border border-outline-variant/30 text-on-surface px-10 py-4 font-label-lg text-label-lg tracking-widest hover:border-secondary hover:text-secondary transition-all active:scale-95"
+            >
+              EXPLORE PRODUCT
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--bagian  koleksi flugel  -->
+      <section
+        class="py-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="text-center mb-20" id="point">
+          <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">
+            Flugel Collections
+          </h2>
+          <div class="w-12 h-[1px] bg-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+          <!-- kotak kalung holy knight -->
+          <div
+            class="md:col-span-8 group relative aspect-[16/9] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="The Angel Collection"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="Angel Key Chain."
+              src="Asset/holyknight.jpeg"
+            />
+            <div
+              class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"
+            ></div>
+            <div class="absolute bottom-10 left-10">
+              <p class="font-label-sm text-label-sm text-secondary mb-2">
+                STYLE
+              </p>
+              <h3 class="font-headline-md text-headline-md text-white">
+                holy <br> knight
+              </h3>
+            </div>
+          </div>
+
+          <!--kotak kalung yang ada merah di tengah -->
+          <div
+            class="md:col-span-4 group relative aspect-[4/5] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="Flugel Collection"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="Kalung Merah"
+              src="Asset/kalung_merah2.jpg"
+            />
+            <div
+              class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500"
+            ></div>
+            <div class="absolute bottom-10 left-10">
+              <p class="font-label-sm text-label-sm text-secondary mb-2">
+                Signature 
+              </p>
+              <h3 class="font-headline-md text-headline-md text-white">
+                Crimson Thorn Layered
+              </h3>
+            </div>
+          </div>
+
+          <!--kotak kalung salib -->
+          <div
+            class="md:col-span-12 group relative aspect-[21/9] overflow-hidden bg-surface-container-low aura-glow cursor-pointer"
+          >
+            <img
+              alt="Necklace Cross"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-alt="A collection of premium black leather accessories, including a wallet, a slim briefcase, and a belt, laid out on a dark, polished wood table. The lighting is low and moody, highlighting the natural grain and supple texture of the high-quality leather. The scene is accented by subtle gold hardware on the briefcase, providing a cinematic high-contrast look. The overall mood is professional, masculine, and intensely luxurious."
+              src="Asset/kalung_salib_model.jpeg"
+            />
+
+            <div
+              class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500"
+            ></div>
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center"
+            >
+              <p
+                class="font-label-sm text-label-sm text-secondary mb-2 tracking-widest"
+              >
+                TACTILE
+              </p>
+              <h3 class="font-headline-lg text-headline-lg text-white mb-6">
+                Master Artwork
+              </h3>
+              <span
+                class="font-label-lg text-label-lg text-white border-b border-white/40 pb-1 group-hover:border-secondary transition-colors"
+                >VIEW COLLECTION</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Craftsmanship Section -->
+      <section class="bg-surface-container-lowest py-stack-xl">
+        <div
+          class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="order-2 md:order-1">
+              <div class="relative aura-glow border border-white/5 p-4">
+                <img
+                  alt="Craftsman at work"
+                  class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                  data-alt="A close-up shot of an artisan's weathered hands carefully polishing a small, intricate gold component of a watch in a dimly lit workshop. Only the hands and the gold piece are illuminated by a warm, focused desk lamp, leaving the rest of the workspace in deep, velvety shadow. The atmosphere is one of intense focus and timeless craftsmanship, with dust motes illuminated in the single beam of light."
+                  src="Asset/model_kalung_salib.jpeg"
+                />
+                <div
+                  class="absolute -bottom-6 -right-6 bg-secondary w-32 h-32 flex items-center justify-center text-on-secondary font-label-lg p-6 text-center leading-tight hidden md:flex"
+                >
+                  CRAFTED BY HAND
+                </div>
+              </div>
+            </div>
+            <div class="order-1 md:order-2">
+              <span
+                class="font-label-lg text-label-lg text-secondary tracking-widest block mb-6"
+                >THE ART OF FASHION</span
+              >
+              <h2
+                class="font-headline-lg text-headline-lg text-on-background mb-8"
+              >
+                Where Beauty Meets Style
+              </h2>
+              <p
+                class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed"
+              >
+                Each Flugel accessory is the result of hundreds of hours of
+                meticulous attention to detail. Our master artisans create pieces
+                that aren't just worn, but inherited.
+              </p>
+              <button
+                onclick="
+                  document
+                    .getElementById('philosophy-modal')
+                    .classList.remove('hidden')
+                "
+                class="font-label-lg text-label-lg text-primary border-b border-secondary pb-1 hover:text-secondary transition-colors"
+              >
+                OUR PHILOSOPHY
+              </button>
+              <!-- Philosophy Modal -->
+              <div
+                id="philosophy-modal"
+                class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10"
+              >
+                <!-- Overlay -->
+                <div
+                  onclick="
+                    document
+                      .getElementById('philosophy-modal')
+                      .classList.add('hidden')
+                  "
+                  class="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                ></div>
+
+                <!-- Modal box -->
+                <div class="relative z-10 w-full max-w-4xl">
+                  <!-- Tombol X -->
+                  <button
+                    onclick="
+                      document
+                        .getElementById('philosophy-modal')
+                        .classList.add('hidden')
+                    "
+                    class="absolute top-2 right-2 z-20 w-8 h-8 flex items-center justify-center bg-black/60 text-white hover:bg-black transition-colors text-sm rounded-full"
+                  >
+                    ✕
+                  </button>
+
+                  <!-- Grid foto -->
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <div class="col-span-2 aspect-[16/9] overflow-hidden">
+                      <img
+                        src="Asset/cincin_tangan.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-[3/4] overflow-hidden">
+                      <img
+                        src="Asset/model_kalung_salib.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/kalung_model_2.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/model_kalung.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div class="col-span-1 aspect-square overflow-hidden">
+                      <img
+                        src="Asset/kalung_model.jpeg"
+                        class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Social Proof / Testimonials -->
+      <section class="py-stack-xl px-margin-mobile">
+        <div class="max-w-3xl mx-auto text-center">
+          <div class="flex justify-center mb-10 text-secondary">
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >FLUGEL</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >FLUGEL</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >FLUGEL</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >FLUGEL</span
+            >
+            <span
+              class="material-symbols-outlined"
+              style="font-variation-settings: &quot;FILL&quot; 1"
+              >FLUGEL</span
+            >
+          </div>
+          <blockquote
+            class="font-headline-md text-headline-md text-on-background italic mb-10 leading-relaxed"
+          >
+            "FLUGEL represents the pinnacle of quiet luxury. The weight of the
+            timepiece, everything speaks to a level
+            of quality that is increasingly rare in the modern world."
+          </blockquote>
+          <cite class="not-italic">
+            <p
+              class="font-label-lg text-label-lg text-secondary tracking-widest"
+            >
+              SEAN FARREL TJAHYADI
+            </p>
+            <p
+              class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1"
+            >
+              Creative Director, Pademangan
+            </p>
+          </cite>
+        </div>
+      </section>
+      <!-- Product Showcase Grid -->
+      <section
+        class="pb-stack-xl px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto"
+      >
+        <div class="flex justify-between items-end mb-12">
+          <h2 class="font-headline-lg text-headline-lg text-on-background">
+            Flugel Featured
+          </h2>
+          <a
+            class="font-label-lg text-label-lg text-secondary border-b border-secondary/30 pb-1 hover:border-secondary transition-all"
+            href="https://tr.ee/wWhkD4Mzxa"
+            target="_blank"
+            >VIEW ALL</a
+          >
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+          <!-- Produk flugel -->
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="CINCIN TIDAK ADA BATAS"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="Infinity Cincin"
+                src="Asset/cincin_infinity.jpeg"
+              />
+
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-secondary/10 text-secondary px-3 py-1 font-label-sm text-[10px] rounded-full backdrop-blur-md"
+                  >LIMITED</span
+                >
+              </div>
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Infinity ring
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              Rp 17.500
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Gold Cufflinks"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A pair of intricately engraved 18k gold cufflinks resting on a dark silk fabric. The lighting is warm and soft, accentuating the fine engravings and the rich yellow hue of the gold. The setting is luxurious and formal, suggesting high-end evening wear. The aesthetic is refined and focuses on small but significant details of quality."
+                src="Asset/kalung_salib_ph.jpeg"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+            Classic Cross Pendant
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              Rp 28.000
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="Leather Wallet"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="A slim, bi-fold black leather wallet made from exotic hide, displaying a unique pebble texture. The wallet is partially open, revealing a minimalist interior. The shot is taken in low-light, emphasizing the depth of the black color and the precision of the edge-stitching. The mood is sophisticated and exclusive."
+                src="Asset/holyknight.jpeg"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              Holy knight
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              Rp 25.000
+            </p>
+          </div>
+          <div class="group cursor-pointer">
+            <div
+              class="aspect-[3/4] bg-surface-container overflow-hidden mb-6 relative"
+            >
+              <img
+                alt="-"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                data-alt="-"
+                src="Asset/kalung.jpeg"
+              />
+            </div>
+            <h4
+              class="font-headline-md text-body-md text-on-surface group-hover:text-secondary transition-colors"
+            >
+              shooting star
+            </h4>
+            <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              Rp 25.000
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-surface-container-lowest text-primary py-stack-xl border-t border-outline-variant/10"
+    >
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <a
+            class="font-headline-md text-headline-md text-primary block mb-6"
+            href="#"
+            >Flugel</a
+          >
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-[200px]"
+          >
+            Crafting the artifacts of tomorrow, today.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ></a
+            >
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ></a
+            >
+            <a
+              class="text-on-surface-variant hover:text-secondary transition-colors"
+              href="#"
+              ></a
+            >
+          </div>
+        </div>
+        <div>
+          <h5
+            class="font-label-lg text-label-lg text-on-background mb-6 uppercase tracking-widest"
+          >
+            Collections
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                target="_blank"
+                href="https://www.instagram.com/flugel_id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                target="_blank"
+                href="https://www.tiktok.com/@flugel_id?is_from_webapp=1&sender_device=pc"
+                >Tiktok</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                target="_blank"
+                href="https://shopee.co.id/flugel.id"
+                >Shopee</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                target="_blank"
+                href="https://www.tokopedia.com/flugel-id?_branch_match_id=1358002851613933139&utm_source=salinlink&utm_campaign=Shop--7496234501275617828-240725&utm_medium=share&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL8nPzi9ITclM1MvJzMvWdzOOTEwPd89ID0uyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAaiBqpzwAAAA%3D"
+                >Tokopedia </a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="font-label-lg text-label-lg text-on-background mb-6 uppercase tracking-widest"
+          >
+            The Flugel
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Craftsmanship</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Sustainability</a
+              >
+            </li>
+            <li>
+              <a
+                class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-all"
+                href="#"
+                >Heritage</a
+              >
+            </li>
+            <li>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant/5 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-label-sm text-label-sm text-on-surface-variant/60 uppercase"
+        >
+          © 2024 Flugel ACCESSORIES. ALL RIGHTS RESERVED.
+        </p>
+        <div class="flex gap-8">
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant/60 hover:text-secondary transition-colors uppercase"
+            href="#"
+            >Privacy</a
+          >
+          <a
+            class="font-label-sm text-label-sm text-on-surface-variant/60 hover:text-secondary transition-colors uppercase"
+            href="#"
+            >Terms</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
